@@ -10,6 +10,8 @@ cd apex
 pip install -v --no-cache-dir ./
 cd ..
 
+git clone https://github.com/open-mmlab/mmdetection/
+
 # copy files
 cp -r src/reppoints_head/* mmdetection/mmdet/models/anchor_heads/
 cp -r src/reppoints_detector/* mmdetection/mmdet/models/detectors/
