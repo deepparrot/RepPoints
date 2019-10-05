@@ -370,7 +370,7 @@ model_configs.append(
      'paper_arxiv_id': '1904.11490',
      'weights_url': 'https://github.com/deepparrot/RepPoints/releases/download/0.1/reppoints_moment_r101_fpn_2x_mt.pth',
      'weights_name': 'reppoints_moment_r101_fpn_2x_mt.pth',
-     'config': './configs/',
+     'config': './configs/reppoints_moment_r101_fpn_2x_mt.py',
     'paper_results': None}
 )
 
