@@ -20,6 +20,7 @@ cp -r src/reppoints_assigner/* mmdetection/mmdet/core/bbox/assigners/
 
 # install mmdetection
 cd mmdetection
+git checkout 6e48d28198ea5d6dcf6a9618fd8d2832b5eaf538
 echo "Installing..."
 $PYTHON setup.py develop
 cd ..
