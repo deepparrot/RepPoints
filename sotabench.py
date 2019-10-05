@@ -384,7 +384,7 @@ model_configs.append(
 )
 
 model_configs.append(
-    {'model_name': 'RPDet (ResNet-101-DCN, multi-scale train)', 
+    {'model_name': 'RPDet (ResNet-101-DCN, multi-scale)', 
      'paper_arxiv_id': '1904.11490',
      'weights_url': 'https://github.com/deepparrot/RepPoints/releases/download/0.1/reppoints_moment_r101_dcn_fpn_2x_mt.pth',
      'weights_name': 'reppoints_moment_r101_dcn_fpn_2x_mt.pth',
@@ -402,7 +402,7 @@ model_configs.append(
 )
 
 model_configs.append(
-    {'model_name': 'RPDet (ResNeXt-101-FPN-DCN, LR 2x, mstrain)', 
+    {'model_name': 'RPDet (ResNeXt-101-DCN, multi-scale)', 
      'paper_arxiv_id': '1904.11490',
      'weights_url': 'https://github.com/deepparrot/RepPoints/releases/download/0.1/reppoints_moment_x101_dcn_fpn_2x_mt.pth',
      'weights_name': 'reppoints_moment_x101_dcn_fpn_2x_mt.pth',
