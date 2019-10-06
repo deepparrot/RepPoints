@@ -25,6 +25,8 @@ from mmdetection.mmdet.models import build_detector
 from torchbench.utils import extract_archive
 image_dir_zip = osp.join('./.data/vision/coco', 'val2017.zip')
 extract_archive(from_path=image_dir_zip, to_path='./.data/vision/coco')
+image_dir_zip = osp.join('./.data/vision/coco', 'val2017.zip')
+extract_archive(from_path=image_dir_zip, to_path='./.data/vision/coco')
 
 from pathlib import Path
 
@@ -236,6 +238,12 @@ def evaluate_model(model_name, paper_arxiv_id, weights_url, weights_name, paper_
     print('---')
     print('Now Evaluating %s' % model_name)
 
+    evaluator = COCOEvaluator(
+    root='./.data/vision/coco',
+    model_name=model_name,
+    paper_arxiv_id=paper_arxiv_id,
+    paper_results=paper_results) 
+    
     out = 'results.pkl'
     launcher = 'none'
 
