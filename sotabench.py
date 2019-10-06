@@ -235,11 +235,6 @@ def collect_results(result_part, size, tmpdir=None):
 def evaluate_model(model_name, paper_arxiv_id, weights_url, weights_name, paper_results, config):
     print('---')
     print('Now Evaluating %s' % model_name)
-    evaluator = COCOEvaluator(
-    root='./.data/vision/coco',
-    model_name=model_name,
-    paper_arxiv_id=paper_arxiv_id,
-    paper_results=paper_results)
 
     out = 'results.pkl'
     launcher = 'none'
@@ -296,6 +291,12 @@ def evaluate_model(model_name, paper_arxiv_id, weights_url, weights_name, paper_
     else:
         model.CLASSES = dataset.CLASSES
 
+    evaluator = COCOEvaluator(
+    root='./.data/vision/coco',
+    model_name=model_name,
+    paper_arxiv_id=paper_arxiv_id,
+    paper_results=paper_results) 
+        
     if not distributed:
         model = MMDataParallel(model, device_ids=[0])
         outputs, cache_exists = single_gpu_test(model, data_loader, False, evaluator)
