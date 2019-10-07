@@ -299,11 +299,7 @@ def evaluate_model(model_name, paper_arxiv_id, weights_url, weights_name, paper_
     else:
         model.CLASSES = dataset.CLASSES
 
-    evaluator = COCOEvaluator(
-    root='./.data/vision/coco',
-    model_name=model_name,
-    paper_arxiv_id=paper_arxiv_id,
-    paper_results=paper_results) 
+    evaluator.reset_time()
         
     if not distributed:
         model = MMDataParallel(model, device_ids=[0])
